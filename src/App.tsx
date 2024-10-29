@@ -7,6 +7,10 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { SelectScrollable } from "./components/SelectScrollable";
+import { Button } from "./components/ui/button";
+import { Switch } from "./components/ui/switch";
+import { CollapsibleDemo } from "./components/Collapsible";
 
 function App() {
   return (
@@ -37,6 +41,16 @@ function App() {
           <DatePickerRange />
         </SheetContent>
       </Sheet>
+      <SelectScrollable />
+      <Button>Default button</Button>
+      <Button variant="secondary">Secondary button</Button>
+      <Button variant="link">Link button</Button>
+      <Button variant="destructive">Destructive button</Button>
+      <Button variant="ghost">Ghost button</Button>
+      <Button variant="outline">Outline button</Button>
+      <Button className="bg-black">Default button with custom color</Button>
+      <Switch />
+      <CollapsibleDemo />
     </main>
   );
 }
