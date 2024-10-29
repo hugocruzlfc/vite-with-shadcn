@@ -1,4 +1,12 @@
 import { DatePickerRange } from "./components/DatePickerRange";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 function App() {
   return (
@@ -16,6 +24,19 @@ function App() {
         to Vite.
       </h1>
       <DatePickerRange />
+      <Sheet>
+        <SheetTrigger>Open Sheet</SheetTrigger>
+        <SheetContent>
+          <SheetHeader>
+            <SheetTitle>Are you absolutely sure?</SheetTitle>
+            <SheetDescription>
+              This action cannot be undone. This will permanently delete your
+              account and remove your data from our servers.
+            </SheetDescription>
+          </SheetHeader>
+          <DatePickerRange />
+        </SheetContent>
+      </Sheet>
     </main>
   );
 }
